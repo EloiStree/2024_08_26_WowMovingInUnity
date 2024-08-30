@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InputInputToWowMovingLogicFlyMono : MonoBehaviour
+public class InputToWowMovingLogicFlyMono : MonoBehaviour
 {
 
     public WowMovingLogicClassicFlyMono m_movingLogicFly;

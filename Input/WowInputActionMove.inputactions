@@ -486,6 +486,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "MousePosition",
+                    "type": "Value",
+                    "id": "89e959da-710d-42b3-91d5-b60722a013a7",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -493,6 +502,17 @@
                     "name": "",
                     "id": "16f40dcd-9870-499b-a4ba-a76749333e43",
                     "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ButtonLeft",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "574fef72-3505-43f6-b90d-9df81ab05ec7",
+                    "path": "<Touchscreen>/Press",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -532,32 +552,26 @@
                     "action": "ZoomOut",
                     "isComposite": false,
                     "isPartOfComposite": false
-                }
-            ]
-        },
-        {
-            "name": "New action map",
-            "id": "55c4442b-09fa-45cc-a3a7-e1fab059a699",
-            "actions": [
-                {
-                    "name": "New action",
-                    "type": "Button",
-                    "id": "a9606472-79cb-40f9-95c0-feb522abbeb6",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                }
-            ],
-            "bindings": [
+                },
                 {
                     "name": "",
-                    "id": "fc910437-2aaa-4403-9242-d4948a9a0f55",
-                    "path": "",
+                    "id": "ab461bed-ecee-402f-a880-c9383ae90941",
+                    "path": "<Mouse>/position",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "New action",
+                    "action": "MousePosition",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1f02aa66-d2fe-46a7-a38b-d61517653f64",
+                    "path": "<Touchscreen>/touch0/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MousePosition",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
