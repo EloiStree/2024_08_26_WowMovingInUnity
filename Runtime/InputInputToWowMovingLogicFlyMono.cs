@@ -51,6 +51,15 @@ public class InputInputToWowMovingLogicFlyMono : MonoBehaviour
             m_movingLogicFly.SetStrafeRightKey(m_input.GetStrafeRight());
         }
 
+        if(m_input.GetRotateUp()!= m_previousInput.GetRotateUp())
+        {
+            m_movingLogicFly.SetRotateUpKey(m_input.GetRotateUp());
+        }
+        if(m_input.GetRotateDown()!= m_previousInput.GetRotateDown())
+        {
+            m_movingLogicFly.SetRotateDownKey(m_input.GetRotateDown());
+        }
+
 
         m_previousInput.SetWith(m_input);
     }

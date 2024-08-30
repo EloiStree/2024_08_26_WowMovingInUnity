@@ -9,6 +9,7 @@ public class WowMovingLogicClassicFlyMono : MonoBehaviour
     public Transform m_cameraPositionToUse;
     public bool m_useCameraForwardMode;
     public float m_horizontalRotationAngleSpeed = 180;
+    public float m_verticalRotationAngleSpeed = 90;
     public float m_strafeMeterPerSecond = 1;
     public float m_forwardMeterPerSecond = 1;
     public float m_upMeterPerSecond = 1;
@@ -18,6 +19,8 @@ public class WowMovingLogicClassicFlyMono : MonoBehaviour
     public Vector3 m_lastDirection;
     public bool m_rotateLeftKey = false;
     public bool m_rotateRightKey = false;
+    public bool m_rotateUpKey = false;
+    public bool m_rotateDownKey = false;
     public bool m_strafeLeftKey = false;
     public bool m_strafeRightKey = false;
     public bool m_forwardKey = false;
@@ -39,6 +42,17 @@ public class WowMovingLogicClassicFlyMono : MonoBehaviour
     {
         m_rotateRightKey = isDown;
     }
+
+    public void SetRotateUpKey(bool isDown)
+    {
+        m_rotateUpKey = isDown;
+    }
+    public void SetRotateDownKey(bool isDown)
+    {
+        m_rotateDownKey = isDown;
+    }
+
+
     public void SetStrafeLeftKey(bool isDown)
     {
         m_strafeLeftKey = isDown;
@@ -137,6 +151,17 @@ public class WowMovingLogicClassicFlyMono : MonoBehaviour
         else if (m_rotateRightKey)
         {
             m_horizontalRotationAngle += m_horizontalRotationAngleSpeed * Time.deltaTime;
+        }
+
+        if (m_rotateUpKey && m_rotateDownKey)
+        {}
+        else if (m_rotateUpKey)
+        {
+            m_verticalRotationAngle -= m_verticalRotationAngleSpeed * Time.deltaTime;
+        }
+        else if (m_rotateDownKey)
+        {
+            m_verticalRotationAngle += m_verticalRotationAngleSpeed * Time.deltaTime;
         }
 
         m_verticalRotationAngle = Mathf.Clamp(m_verticalRotationAngle, -89, 89);

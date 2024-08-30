@@ -27,6 +27,11 @@ public class WowCameraMoveMono : MonoBehaviour
     {
         m_isCameraForwardMode = isFlying;
     }
+    private void Awake()
+    {
+        SetCameraForwardMode(true);
+        SetCameraForwardMode(false);
+    }
 
     public void Update()
     {
@@ -54,7 +59,7 @@ public class WowCameraMoveMono : MonoBehaviour
             {
                 m_horizontalRotationAngle0To360 = m_previousCameraForwardModeHorizontalAngle;
                 m_verticalRotationAngleLess90To90 = m_previousCameraForwardModeVerticalAngle;
-                float angle = GetPlayerHorizontalFlatNgle();
+                float angle = GetPlayerHorizontalFlatAngle();
                 m_horizontalRotationAngle0To360 -= angle;
             }
         }
@@ -86,7 +91,7 @@ public class WowCameraMoveMono : MonoBehaviour
         float horizontalAngle = m_horizontalRotationAngle0To360;
         if( !m_isCameraForwardMode)
         {
-            float angle = GetPlayerHorizontalFlatNgle();
+            float angle = GetPlayerHorizontalFlatAngle();
             horizontalAngle += angle;
         }
 
@@ -104,7 +109,7 @@ public class WowCameraMoveMono : MonoBehaviour
         
     }
 
-    private float GetPlayerHorizontalFlatNgle()
+    private float GetPlayerHorizontalFlatAngle()
     {
         Vector3 forward = m_objectToLookAt.forward;
         forward.y = 0;

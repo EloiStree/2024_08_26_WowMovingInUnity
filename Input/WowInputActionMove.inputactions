@@ -76,6 +76,42 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "PickUp",
+                    "type": "Button",
+                    "id": "9414d569-70e8-4b41-9c7d-d15a5d9d06d0",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "PickDown",
+                    "type": "Button",
+                    "id": "0374c44c-ca5e-425f-89dc-c93b2b7d2d13",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "RotateUp",
+                    "type": "Button",
+                    "id": "e3c30d21-c2bf-4edf-a622-254e78b1ea3d",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "RotateDown",
+                    "type": "Button",
+                    "id": "9fa03120-b06f-42f0-be93-3f94efc87744",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -104,7 +140,7 @@
                 {
                     "name": "",
                     "id": "7ce4ea36-e2df-4847-817d-8c3c07685bda",
-                    "path": "",
+                    "path": "<XRInputV1::Oculus::OculusTouchControllerLeft>{LeftHand}/thumbstick/up",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -137,7 +173,7 @@
                 {
                     "name": "",
                     "id": "5165d742-abb6-440a-97f3-900b72bc2bf6",
-                    "path": "",
+                    "path": "<XRInputV1::Oculus::OculusTouchControllerLeft>{LeftHand}/thumbstick/down",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -170,7 +206,7 @@
                 {
                     "name": "",
                     "id": "3935a11c-4e8e-4d0b-b7bb-8f867f9769f5",
-                    "path": "",
+                    "path": "<XRInputV1::Oculus::OculusTouchControllerLeft>{LeftHand}/thumbstick/left",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -203,7 +239,7 @@
                 {
                     "name": "",
                     "id": "74a6db75-239c-491e-8f8b-ca78aece694f",
-                    "path": "",
+                    "path": "<XRInputV1::Oculus::OculusTouchControllerLeft>{LeftHand}/thumbstick/right",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -236,7 +272,7 @@
                 {
                     "name": "",
                     "id": "24fdbf89-46af-4592-a0ce-7955611277de",
-                    "path": "",
+                    "path": "<XRInputV1::Oculus::OculusTouchControllerRight>{RightHand}/thumbstick/left",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -269,7 +305,7 @@
                 {
                     "name": "",
                     "id": "d58a7f7b-33c7-47ed-a3a8-cbbcfada0537",
-                    "path": "",
+                    "path": "<XRInputV1::Oculus::OculusTouchControllerRight>{RightHand}/thumbstick/right",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -302,7 +338,7 @@
                 {
                     "name": "",
                     "id": "4c05619a-caef-452a-93d2-6710e204af6c",
-                    "path": "",
+                    "path": "<XRInputV1::Oculus::OculusTouchControllerRight>{RightHand}/thumbstick/up",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -335,11 +371,77 @@
                 {
                     "name": "",
                     "id": "520cef78-e7da-43a7-b85d-788012d68ee1",
-                    "path": "",
+                    "path": "<XRInputV1::Oculus::OculusTouchControllerRight>{RightHand}/thumbstick/down",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "MoveDown",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "91a22067-0bf7-4c61-bc02-dbc30d66dd02",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PickUp",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "865f4657-27c2-4806-bd08-08a65b7c2900",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PickDown",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d689595a-817e-4881-b572-01e7992927c7",
+                    "path": "<Keyboard>/v",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "RotateUp",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d6ea82b4-dd27-4ff4-a97c-9e7ca9b32880",
+                    "path": "<Gamepad>/leftShoulder",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "RotateUp",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a15f1d8c-b8e7-4103-954e-5c340b216377",
+                    "path": "<Keyboard>/b",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "RotateDown",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "48bd8450-7c89-4fb2-85e5-8ab8e5757b42",
+                    "path": "<Gamepad>/leftTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "RotateDown",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
@@ -428,6 +530,34 @@
                     "processors": "",
                     "groups": "",
                     "action": "ZoomOut",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "New action map",
+            "id": "55c4442b-09fa-45cc-a3a7-e1fab059a699",
+            "actions": [
+                {
+                    "name": "New action",
+                    "type": "Button",
+                    "id": "a9606472-79cb-40f9-95c0-feb522abbeb6",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "fc910437-2aaa-4403-9242-d4948a9a0f55",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "New action",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

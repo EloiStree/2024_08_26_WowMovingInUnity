@@ -1,0 +1,23 @@
+
+{                                                                                
+  "name": "be.elab.wowmove",                              
+  "displayName": "Wow Moving In Unity",                        
+  "version": "0.0.1",                         
+  "unity": "2018.1",                             
+  "unityRelease": "",                             
+  "description": "A movable character like the wow character.",                         
+  "keywords": ["Script","Tool"],                       
+  "dependencies":{},     
+  "relatedPackages":{},     
+  "samples" : [],     
+  "author" : {
+"name":"",
+"mail":"",
+"url":""},     
+  "repository":{
+"type":"Git",
+"url":"https://github.com/EloiStree/2024_08_26_WowMovingInUnity.git",
+"footprint":"",
+"revision":""},     
+  "category": "Script"                   
+} 

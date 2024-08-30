@@ -9,6 +9,8 @@ public interface I_WowMoveInputSet {
     void SetMoveBack(bool value);
     void SetRotateLeft(bool value);
     void SetRotateRight(bool value);
+    void SetRotateUp(bool value);
+    void SetRotateDown(bool value);
     void SetMoveUp(bool value);
     void SetMoveDown(bool value);
     void SetStrafeLeft(bool value);
@@ -22,6 +24,8 @@ public interface I_WowMoveInputGet
     bool GetMoveBack();
     bool GetRotateLeft();
     bool GetRotateRight();
+    bool GetRotateUp();
+    bool GetRotateDown();
     bool GetMoveUp();
     bool GetMoveDown();
     bool GetStrafeLeft();
@@ -59,6 +63,11 @@ public class AbstractWowMoveInputMono : MonoBehaviour, I_WowMoveInput {
         return ((I_WowMoveInputGet)m_inputState).GetMoveUp();
     }
 
+    public bool GetRotateDown()
+    {
+        return ((I_WowMoveInputGet)m_inputState).GetRotateDown();
+    }
+
     public bool GetRotateLeft()
     {
         return ((I_WowMoveInputGet)m_inputState).GetRotateLeft();
@@ -67,6 +76,11 @@ public class AbstractWowMoveInputMono : MonoBehaviour, I_WowMoveInput {
     public bool GetRotateRight()
     {
         return ((I_WowMoveInputGet)m_inputState).GetRotateRight();
+    }
+
+    public bool GetRotateUp()
+    {
+        return ((I_WowMoveInputGet)m_inputState).GetRotateUp();
     }
 
     public bool GetStrafeLeft()
@@ -99,6 +113,11 @@ public class AbstractWowMoveInputMono : MonoBehaviour, I_WowMoveInput {
         ((I_WowMoveInputSet)m_inputState).SetMoveUp(value);
     }
 
+    public void SetRotateDown(bool value)
+    {
+        ((I_WowMoveInputSet)m_inputState).SetRotateDown(value);
+    }
+
     public void SetRotateLeft(bool value)
     {
         ((I_WowMoveInputSet)m_inputState).SetRotateLeft(value);
@@ -107,6 +126,11 @@ public class AbstractWowMoveInputMono : MonoBehaviour, I_WowMoveInput {
     public void SetRotateRight(bool value)
     {
         ((I_WowMoveInputSet)m_inputState).SetRotateRight(value);
+    }
+
+    public void SetRotateUp(bool value)
+    {
+        ((I_WowMoveInputSet)m_inputState).SetRotateUp(value);
     }
 
     public void SetStrafeLeft(bool value)
@@ -132,6 +156,9 @@ public class AbstractWowMoveInput: I_WowMoveInput
     public bool m_moveBackIsDown = false;
     public bool m_rotateLeftIsDown = false;
     public bool m_rotateRightIsDown = false;
+    public bool m_rotateUpIsDown = false;
+    public bool m_rotateDownIsDown = false;
+
     public bool m_moveUpIsDown = false;
     public bool m_moveDownIsDown = false;
     public bool m_strafeLeftIsDown = false;
@@ -213,6 +240,29 @@ public class AbstractWowMoveInput: I_WowMoveInput
         m_moveDownIsDown = input.GetMoveDown();
         m_strafeLeftIsDown = input.GetStrafeLeft();
         m_strafeRightIsDown = input.GetStrafeRight();
+        m_rotateDownIsDown = input.GetRotateDown();
+        m_rotateUpIsDown = input.GetRotateUp();
+
+    }
+
+    public void SetRotateUp(bool value)
+    {
+        m_rotateUpIsDown = value;
+    }
+
+    public void SetRotateDown(bool value)
+    {
+        m_rotateDownIsDown = value;
+    }
+
+    public bool GetRotateUp()
+    {
+        return m_rotateUpIsDown;
+    }
+
+    public bool GetRotateDown()
+    {
+        return m_rotateDownIsDown;
     }
 }
 
@@ -224,6 +274,8 @@ public class WowMoveInputAnchorMono : AbstractWowMoveInputMono
     public UnityEngine.InputSystem.InputActionReference m_moveBack       ;
     public UnityEngine.InputSystem.InputActionReference m_rotateLeft       ;
     public UnityEngine.InputSystem.InputActionReference m_rotateRight      ;
+    public UnityEngine.InputSystem.InputActionReference m_rotateUp         ;
+    public UnityEngine.InputSystem.InputActionReference m_rotateDown       ;
     public UnityEngine.InputSystem.InputActionReference m_moveUp         ;
     public UnityEngine.InputSystem.InputActionReference m_moveDown       ;
     public UnityEngine.InputSystem.InputActionReference m_strafeLeft ;
@@ -235,6 +287,8 @@ public class WowMoveInputAnchorMono : AbstractWowMoveInputMono
     public UnityEvent<bool> m_isMovingBack;
     public UnityEvent<bool> m_isRotatingLeft;
     public UnityEvent<bool> m_isRotatingRight;
+    public UnityEvent<bool> m_isRotatingUp;
+    public UnityEvent<bool> m_isRotatingDown;
     public UnityEvent<bool> m_isMovingUp;
     public UnityEvent<bool> m_isMovingDown;
     public UnityEvent<bool> m_isStrafeLeft;
@@ -251,6 +305,9 @@ public class WowMoveInputAnchorMono : AbstractWowMoveInputMono
         m_moveDown.action.Enable();
         m_strafeLeft.action.Enable();
         m_strafeRight.action.Enable();
+        m_rotateUp.action.Enable();
+        m_rotateDown.action.Enable();
+
 
         m_moveForward.action.performed += ctx => SetMoveForward(true);
         m_moveForward.action.canceled += ctx => SetMoveForward(false);
@@ -268,6 +325,11 @@ public class WowMoveInputAnchorMono : AbstractWowMoveInputMono
         m_strafeLeft.action.canceled += ctx => SetStrafeLeft(false);
         m_strafeRight.action.performed += ctx => SetStrafeRight(true);
         m_strafeRight.action.canceled += ctx => SetStrafeRight(false);
+
+        m_rotateUp.action.performed += ctx => SetRotateUp(true);
+        m_rotateUp.action.canceled += ctx => SetRotateUp(false);
+        m_rotateDown.action.performed += ctx => SetRotateDown(true);
+        m_rotateDown.action.canceled += ctx => SetRotateDown(false);
 
     }
 
@@ -291,6 +353,10 @@ public class WowMoveInputAnchorMono : AbstractWowMoveInputMono
         m_strafeLeft.action.canceled -= ctx => SetStrafeLeft(false);
         m_strafeRight.action.performed -= ctx => SetStrafeRight(true);
         m_strafeRight.action.canceled -= ctx => SetStrafeRight(false);
+        m_rotateUp.action.performed -= ctx => SetRotateUp(true);
+        m_rotateUp.action.canceled -= ctx => SetRotateUp(false);
+        m_rotateDown.action.performed -= ctx => SetRotateDown(true);
+        m_rotateDown.action.canceled -= ctx => SetRotateDown(false);
 
 
     }
