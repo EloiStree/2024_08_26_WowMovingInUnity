@@ -228,16 +228,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66b4f19b4b09e5d4698db4638e922832, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_leftMouseInput: {fileID: -1876279716830772278, guid: bc229d83ea05bd241ab577b1d63fe985,
-    type: 3}
-  m_rightMouseInput: {fileID: 721681837515670133, guid: bc229d83ea05bd241ab577b1d63fe985,
-    type: 3}
-  m_zoomInTick: {fileID: -5029693764360330307, guid: bc229d83ea05bd241ab577b1d63fe985,
-    type: 3}
-  m_zoomOutTick: {fileID: 722743931448998349, guid: bc229d83ea05bd241ab577b1d63fe985,
-    type: 3}
-  m_screenPosition: {fileID: 5131650088526347358, guid: bc229d83ea05bd241ab577b1d63fe985,
-    type: 3}
+  m_leftMouseInput: {fileID: -1876279716830772278, guid: bc229d83ea05bd241ab577b1d63fe985, type: 3}
+  m_rightMouseInput: {fileID: 721681837515670133, guid: bc229d83ea05bd241ab577b1d63fe985, type: 3}
+  m_zoomInTick: {fileID: -5029693764360330307, guid: bc229d83ea05bd241ab577b1d63fe985, type: 3}
+  m_zoomOutTick: {fileID: 722743931448998349, guid: bc229d83ea05bd241ab577b1d63fe985, type: 3}
+  m_screenPosition: {fileID: 5131650088526347358, guid: bc229d83ea05bd241ab577b1d63fe985, type: 3}
   m_onLeftDown:
     m_PersistentCalls:
       m_Calls:
@@ -533,6 +528,9 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -638,6 +636,9 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -888,26 +889,16 @@ MonoBehaviour:
     m_moveDownIsDown: 0
     m_strafeLeftIsDown: 0
     m_strafeRightIsDown: 0
-  m_moveForward: {fileID: 4959344507852171381, guid: bc229d83ea05bd241ab577b1d63fe985,
-    type: 3}
-  m_moveBack: {fileID: -9185595767765452390, guid: bc229d83ea05bd241ab577b1d63fe985,
-    type: 3}
-  m_rotateLeft: {fileID: -3528263700761588886, guid: bc229d83ea05bd241ab577b1d63fe985,
-    type: 3}
-  m_rotateRight: {fileID: -3446824812383682727, guid: bc229d83ea05bd241ab577b1d63fe985,
-    type: 3}
-  m_rotateUp: {fileID: -1974022011934367023, guid: bc229d83ea05bd241ab577b1d63fe985,
-    type: 3}
-  m_rotateDown: {fileID: 7912503296602575120, guid: bc229d83ea05bd241ab577b1d63fe985,
-    type: 3}
-  m_moveUp: {fileID: 9028763346919309402, guid: bc229d83ea05bd241ab577b1d63fe985,
-    type: 3}
-  m_moveDown: {fileID: 1437440430171040353, guid: bc229d83ea05bd241ab577b1d63fe985,
-    type: 3}
-  m_strafeLeft: {fileID: -2820096989059214536, guid: bc229d83ea05bd241ab577b1d63fe985,
-    type: 3}
-  m_strafeRight: {fileID: -404477706291949218, guid: bc229d83ea05bd241ab577b1d63fe985,
-    type: 3}
+  m_moveForward: {fileID: 4959344507852171381, guid: bc229d83ea05bd241ab577b1d63fe985, type: 3}
+  m_moveBack: {fileID: -9185595767765452390, guid: bc229d83ea05bd241ab577b1d63fe985, type: 3}
+  m_rotateLeft: {fileID: -3528263700761588886, guid: bc229d83ea05bd241ab577b1d63fe985, type: 3}
+  m_rotateRight: {fileID: -3446824812383682727, guid: bc229d83ea05bd241ab577b1d63fe985, type: 3}
+  m_rotateUp: {fileID: -1974022011934367023, guid: bc229d83ea05bd241ab577b1d63fe985, type: 3}
+  m_rotateDown: {fileID: 7912503296602575120, guid: bc229d83ea05bd241ab577b1d63fe985, type: 3}
+  m_moveUp: {fileID: 9028763346919309402, guid: bc229d83ea05bd241ab577b1d63fe985, type: 3}
+  m_moveDown: {fileID: 1437440430171040353, guid: bc229d83ea05bd241ab577b1d63fe985, type: 3}
+  m_strafeLeft: {fileID: -2820096989059214536, guid: bc229d83ea05bd241ab577b1d63fe985, type: 3}
+  m_strafeRight: {fileID: -404477706291949218, guid: bc229d83ea05bd241ab577b1d63fe985, type: 3}
   m_isMovingForward:
     m_PersistentCalls:
       m_Calls: []

@@ -2,9 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class WowMovingLogicClassicFlyMono : MonoBehaviour
 {
-
+    
     public Transform m_whatToMove;
     public Transform m_cameraPositionToUse;
     public bool m_useCameraForwardMode;
